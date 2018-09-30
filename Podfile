@@ -7,5 +7,6 @@ target 'Social posts' do
 
   # Pods for Social posts
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
 end
