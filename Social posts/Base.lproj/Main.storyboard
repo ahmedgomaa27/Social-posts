@@ -102,6 +102,7 @@
                                         <connections>
                                             <outlet property="numLikesLabel" destination="yh5-1k-qzC" id="V3N-8J-rIa"/>
                                             <outlet property="postTextLabel" destination="BHc-qk-nC6" id="UCC-0p-HT9"/>
+                                            <outlet property="starImageView" destination="f9v-aT-Onp" id="DiV-Zw-Uzp"/>
                                             <outlet property="timeLabel" destination="O5M-lj-lYs" id="kFC-5z-ZO8"/>
                                             <outlet property="userNameLabel" destination="w2r-FE-4on" id="tBq-qw-SMa"/>
                                         </connections>

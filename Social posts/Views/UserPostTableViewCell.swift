@@ -17,12 +17,13 @@ class UserPostTableViewCell: UITableViewCell {
     @IBOutlet weak var numLikesLabel: UILabel!
     private var userPostData: UserPostModel?
 
+    @IBOutlet weak var starImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         let labelTapGesture = UITapGestureRecognizer(target: self, action:#selector(labelTapped))
-        self.numLikesLabel.addGestureRecognizer(labelTapGesture)
-        self.numLikesLabel.isUserInteractionEnabled = true
+        self.starImageView.addGestureRecognizer(labelTapGesture)
+        self.starImageView.isUserInteractionEnabled = true
     }
 
     func ConfigureCell(userPost: UserPostModel)  {
