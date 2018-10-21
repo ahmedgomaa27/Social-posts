@@ -39,9 +39,12 @@ class UserPostTableViewCell: UITableViewCell {
     guard let userData = userPostData else {
         return
     }
-    userData.numOfLikes += 1
-    self.numLikesLabel.text = "\(userData.numOfLikes)"
-    NetworkManager.sharedInstance.updateDocument(userPostData: userData)
+    if UserDefaults.standard.value(forKey: userData.documentId) == nil {
+        userData.numOfLikes += 1
+        self.numLikesLabel.text = "\(userData.numOfLikes)"
+        NetworkManager.sharedInstance.updateDocument(userPostData: userData)
+        UserDefaults.standard.set(userData.documentId, forKey: userData.documentId)
+    }
     }
 
 }
