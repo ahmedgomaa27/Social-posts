@@ -51,11 +51,20 @@ class mainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBAction func UserSelectedControl(_ sender: UISegmentedControl) {
         selectedCategory = sender.titleForSegment(at: sender.selectedSegmentIndex)!
         custemList.removeAll()
-        for i in 0...postsList.count - 1 {
-            if postsList[i].category == selectedCategory {
-                custemList.append(postsList[i])
+        if selectedCategory == Categories.popular {
+            for i in 0...postsList.count - 1 {
+                if postsList[i].numOfLikes > 3 {
+                    custemList.append(postsList[i])
+                }
+            }
+        } else {
+            for i in 0...postsList.count - 1 {
+                if postsList[i].category == selectedCategory {
+                    custemList.append(postsList[i])
+                }
             }
         }
+
         hasUserMadeCustomList = true
         self.contentTableView.reloadData()
     }
