@@ -21,7 +21,7 @@ class UserPostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let labelTapGesture = UITapGestureRecognizer(target: self, action:#selector(labelTapped))
+        let labelTapGesture = UITapGestureRecognizer(target: self, action:#selector(favIconTapped))
         self.starImageView.addGestureRecognizer(labelTapGesture)
         self.starImageView.isUserInteractionEnabled = true
     }
@@ -32,14 +32,23 @@ class UserPostTableViewCell: UITableViewCell {
         self.timeLabel.text = Utils.convertDateToString(date: userPost.timestamp.dateValue())
         self.postTextLabel.text = userPost.postTxt
         self.numLikesLabel.text = "\(userPost.numOfLikes)"
+        guard let userData = userPostData else {
+            return
+        }
+        if UserDefaults.standard.value(forKey: userData.documentId) != nil {
+             self.starImageView.image = #imageLiteral(resourceName: "heart_blue")
+        } else {
+            self.starImageView.image = #imageLiteral(resourceName: "heart_white")
+        }
     }
 
 
-   @objc public func labelTapped() {
+   @objc public func favIconTapped() {
     guard let userData = userPostData else {
         return
     }
     if UserDefaults.standard.value(forKey: userData.documentId) == nil {
+        self.starImageView.image = #imageLiteral(resourceName: "heart_blue")
         userData.numOfLikes += 1
         self.numLikesLabel.text = "\(userData.numOfLikes)"
         NetworkManager.sharedInstance.updateDocument(userPostData: userData)

@@ -31,7 +31,7 @@
                                     <segment title="Crazy"/>
                                     <segment title="Popular"/>
                                 </segments>
-                                <color key="tintColor" red="0.27450980390000002" green="0.4039215686" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.27257657051086426" green="0.40323573350906372" blue="0.61905175447463989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="UserSelectedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yyc-kw-c4e"/>
                                     <action selector="catogerySegmentClicked:" destination="LnF-GM-dR0" eventType="valueChanged" id="ZTN-lO-2Lq"/>
@@ -49,31 +49,35 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmed hamdy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2r-FE-4on">
-                                                    <rect key="frame" x="15" y="11" width="103.5" height="18.5"/>
+                                                    <rect key="frame" x="15" y="11" width="103.5" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is my post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHc-qk-nC6">
-                                                    <rect key="frame" x="15" y="49.5" width="345" height="17.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="this is my post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHc-qk-nC6">
+                                                    <rect key="frame" x="15" y="48.5" width="345" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 oct 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5M-lj-lYs">
-                                                    <rect key="frame" x="126.5" y="12.5" width="73.5" height="16.5"/>
+                                                    <rect key="frame" x="126.5" y="11.5" width="73.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ubc-Pv-Y3H">
-                                                    <rect key="frame" x="15" y="82" width="44" height="19"/>
+                                                    <rect key="frame" x="15" y="81" width="44" height="20"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIconFilled" translatesAutoresizingMaskIntoConstraints="NO" id="f9v-aT-Onp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="19"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_white" translatesAutoresizingMaskIntoConstraints="NO" id="f9v-aT-Onp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="WBa-O1-TPP"/>
+                                                                <constraint firstAttribute="width" constant="20" id="ff6-cM-7lf"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh5-1k-qzC">
-                                                            <rect key="frame" x="28" y="0.0" width="16" height="19"/>
+                                                            <rect key="frame" x="28" y="0.0" width="16" height="20"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -255,6 +259,6 @@
     </scenes>
     <resources>
         <image name="addThoughtIcon" width="21" height="24"/>
-        <image name="starIconFilled" width="20" height="19"/>
+        <image name="heart_white" width="256" height="256"/>
     </resources>
 </document>
