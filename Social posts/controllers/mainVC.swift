@@ -64,7 +64,10 @@ class mainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 }
             }
         }
-
+        //sort the posts depending on number of likes
+        custemList.sort { (s0, s1) -> Bool in
+            return s0.numOfLikes > s1.numOfLikes
+        }
         hasUserMadeCustomList = true
         self.contentTableView.reloadData()
     }
